@@ -8,12 +8,51 @@
   font-weight: 400;
   font-style: normal;
 }
-.navbar{
+ /* shared style */
+ .display-flex{
     display: flex;
+ }
+ .primary-btn{
+    background-color: #FF900E;
+    font-weight: 600;
+    color: white;
+    font-size: 2rem;
+    padding: 20px 25px;
+    border-radius: 10px;
+    
+ }
+ main{
+    max-width: 1440px;
+    margin: 0 auto;
+ }
+ main > section{
+    margin-top: 130px;
+
+ }
+ .section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+ }
+ /* dark 02 */
+ .text-gray{
+    color: #424242;
+
+ }
+ /* dark 03 */
+ .text-ligth-gray{
+    color: #727272;
+ }
+ .bg-light{
+    background-color: rgba(255, 144, 14, 0.1);
+
+ }
+
+ /* navbar style */
+
+
+.navbar{
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 144, 14, 0.1)
-    
 
 }
 .brand{
@@ -21,7 +60,6 @@
     font-size: 3rem;
 }
 .nav-link{
-    display: flex;
     text-decoration: none;
     font-weight: 300;
     
@@ -30,8 +68,7 @@
     list-style: none;
     margin-right: 30px;
 }
-.navbar,.banner{
-    background-color: rgba(255, 144, 14, 0.1);
+.navbar, .banner {
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -41,22 +78,19 @@
     text-align: center;
     margin-bottom: 50px;
 }
-.banner title{
+.banner .title{
     font-weight: 700;
     font-size: 4rem;
 }
-.primary-btn{
-    background-color: #d57f1c;
-    font-weight: 600;
-    font-size: 1.25rem;
-    padding: 20px 25px;
-    border-radius: 8px;
-}
+
 .banner-image{
     width: 100%;
 }
+
+
+/* team and features related style */
+
 .teams{
-    display: flex;
     align-items: center;
 
 }
@@ -65,17 +99,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
-main > section{
-    margin-top: 130px;
-    
-}
 
-.section-title{
-    font-size: 2.8rem;
-}
 
 .our-features{
-    margin-left: 130px;
+    margin-left: 20px;
     max-width: 530px;
 }
 
@@ -85,25 +112,102 @@ main > section{
 .text-primary{
     color: #ff902e;
 }
-/*responsive*/
+#feature-section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+.feature{
+    gap: 54px;
+}
+.feature-card{
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+}
+.feature-card .feature-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+  
+}
+.featured-architect img{
+    width: 100%;
+}
+/* facts related style */
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+
+.facts-card{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+ 
+
+}
+.facts-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.facts-namne{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.our-sponsors{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+.copyright{
+    font-weight: 600;
+    font-size: 1rem;
+    max-width: 1440px;
+    margin: 20px auto;
+    padding: 18px 20px;
+    background-color: #FFF4E7;
+    text-align: center;
+    border-radius: 8px;
+}
+/*responsive media query*/
 @media screen and (max-width :576px){
-    .navbar, 
-    .nav-link, 
-    .teams{
+    .navbar, .nav-link, .teams, .features{
         flex-direction: column;
     }
 }
-.team-img-content{
-    grid-template-columns: repeat(1,1fr);
+    
+.team-img-content, .facts-container, .sponsor-companies{
+    grid-template-columns: repeat(1, 1fr);
 }
 .our-features{
     margin-left: 20px;
 }
+.sponsor-companies{
+    grid-template-columns: repeat(1, 1fr);
+}
 /*for medium device*/
 @media screen and (min-width: 576px) and (max-width: 992px){
-    .teams{
-        flex-direction: column;
-    }
-        
-    }
-
+.teams{
+    flex-direction: column;
+}
+}
+.our-features{
+    margin: 10px;
+}
